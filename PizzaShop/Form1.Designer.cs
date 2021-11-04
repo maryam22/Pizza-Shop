@@ -74,6 +74,7 @@ namespace PizzaShop
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -265,6 +266,7 @@ namespace PizzaShop
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(294, 24);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -289,6 +291,7 @@ namespace PizzaShop
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.checkedListBox2);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.radioButton4);
@@ -585,6 +588,15 @@ namespace PizzaShop
             this.listBox1.Size = new System.Drawing.Size(328, 454);
             this.listBox1.TabIndex = 0;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(87, 401);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(240, 18);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Momenteel pasta is niet beschikbaar";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -663,6 +675,7 @@ namespace PizzaShop
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label17;
     }
 }
 
