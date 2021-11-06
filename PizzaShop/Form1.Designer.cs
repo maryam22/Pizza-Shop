@@ -152,7 +152,7 @@ namespace PizzaShop
             this.label16.Size = new System.Drawing.Size(53, 21);
             this.label16.TabIndex = 13;
             this.label16.Text = "Klant:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            //this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label13
             // 
@@ -195,7 +195,7 @@ namespace PizzaShop
             this.label12.Size = new System.Drawing.Size(53, 21);
             this.label12.TabIndex = 8;
             this.label12.Text = "Maat:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            //this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // numericUpDown2
             // 
@@ -214,7 +214,7 @@ namespace PizzaShop
             this.label4.Size = new System.Drawing.Size(63, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Aantal:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
@@ -243,7 +243,7 @@ namespace PizzaShop
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(294, 24);
             this.comboBox2.TabIndex = 3;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+           // this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -266,7 +266,7 @@ namespace PizzaShop
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(294, 24);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            //this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -287,7 +287,7 @@ namespace PizzaShop
             this.label2.Size = new System.Drawing.Size(54, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Pizza:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabPage2
             // 
@@ -399,7 +399,7 @@ namespace PizzaShop
             this.label7.Size = new System.Drawing.Size(47, 21);
             this.label7.TabIndex = 4;
             this.label7.Text = "Prijs:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            //this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -469,7 +469,7 @@ namespace PizzaShop
             this.label9.Size = new System.Drawing.Size(63, 21);
             this.label9.TabIndex = 5;
             this.label9.Text = "Aantal:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            //this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // comboBox3
             // 
@@ -492,7 +492,7 @@ namespace PizzaShop
             this.label8.Size = new System.Drawing.Size(70, 21);
             this.label8.TabIndex = 3;
             this.label8.Text = "Dessert:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+           // this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // numericUpDown1
             // 
