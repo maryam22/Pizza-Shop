@@ -14,6 +14,14 @@ namespace PizzaShop
 {
     public partial class Form1 : Form
     {
+        //Total price
+
+        Store myStore = new Store();
+        decimal runningTotal = 0;
+
+
+
+
         //sql connection
         SqlConnection con = new SqlConnection(@"Data Source=LENOVO\MARYAM;Initial Catalog=project;Integrated Security= True;");
 
@@ -74,6 +82,9 @@ namespace PizzaShop
                 );
             MessageBox.Show(bestelling.ToString());
             listBox1.Items.Add(bestelling);
+            //Total Price 
+            myStore.BestelingList.Add(bestelling);
+          
 
             //Database
 
@@ -93,6 +104,15 @@ namespace PizzaShop
             //make form empty
 
             Empty();
+
+
+            //make total price
+
+         
+            runningTotal += myStore.Checkout();
+            textBox2.Text ="€" + runningTotal.ToString();
+
+
 
         }
 

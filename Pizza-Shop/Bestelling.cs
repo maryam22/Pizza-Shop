@@ -55,7 +55,7 @@ namespace Pizza_Shop
         public override string ToString()
         {
             StringBuilder sa = new StringBuilder();
-            //sa.Append($"Bestelling {Klant.KlantId}:{Environment.NewLine}");
+           
             sa.Append($"Klant: {Klant.Naam}{Environment.NewLine}");
             if (BestelGerecht != null)
             {

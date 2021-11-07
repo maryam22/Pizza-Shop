@@ -30,7 +30,6 @@ namespace PizzaShop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -76,9 +75,7 @@ namespace PizzaShop
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,7 +99,7 @@ namespace PizzaShop
             this.tabControl1.Location = new System.Drawing.Point(-2, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(472, 602);
+            this.tabControl1.Size = new System.Drawing.Size(472, 594);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -123,7 +120,7 @@ namespace PizzaShop
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(464, 571);
+            this.tabPage1.Size = new System.Drawing.Size(464, 563);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pizza";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -458,7 +455,7 @@ namespace PizzaShop
             this.tabPage3.Controls.Add(this.splitter1);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(464, 571);
+            this.tabPage3.Size = new System.Drawing.Size(464, 563);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Dessert";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -507,7 +504,7 @@ namespace PizzaShop
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 571);
+            this.splitter1.Size = new System.Drawing.Size(4, 563);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
@@ -566,7 +563,7 @@ namespace PizzaShop
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(914, 273);
+            this.button1.Location = new System.Drawing.Point(512, 557);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 4;
@@ -597,15 +594,6 @@ namespace PizzaShop
             this.listBox1.Size = new System.Drawing.Size(328, 454);
             this.listBox1.TabIndex = 0;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(512, 557);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Total";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(612, 554);
@@ -613,22 +601,10 @@ namespace PizzaShop
             this.textBox2.Size = new System.Drawing.Size(125, 35);
             this.textBox2.TabIndex = 9;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(701, 562);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(20, 21);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "€";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(756, 550);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 39);
@@ -643,11 +619,9 @@ namespace PizzaShop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::PizzaShopUI.Properties.Resources.pizza_g371cd4530_1920;
-            this.ClientSize = new System.Drawing.Size(1154, 633);
+            this.ClientSize = new System.Drawing.Size(917, 593);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
@@ -656,7 +630,6 @@ namespace PizzaShop
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -724,9 +697,7 @@ namespace PizzaShop
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }
 }
