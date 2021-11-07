@@ -37,6 +37,7 @@ namespace Pizza_Shop
         public decimal BerekenBedrag()
         {
             var bedrag = 0m;
+
             if (Drank != null) bedrag += Drank.BerekenBedrag();
 
             if (Dessert != null) bedrag += Dessert.BerekenBedrag();
@@ -45,10 +46,7 @@ namespace Pizza_Shop
 
 
             bedrag *= Aantal;
-            if (BestelGerecht != null && Dessert != null && Drank != null)
-            {
-                bedrag *= 0.9m;
-            }
+           
 
             return bedrag;
 

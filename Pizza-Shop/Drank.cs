@@ -33,7 +33,7 @@ namespace Pizza_Shop
 
         public decimal BerekenBedrag()
         {
-            return Prijs;
+            return Prijs * Aantal;
         }
         public override string ToString()
         {

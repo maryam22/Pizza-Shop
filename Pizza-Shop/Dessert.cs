@@ -29,8 +29,6 @@ namespace Pizza_Shop
                 case DessertType.Cake:
                     Prijs = 2m;
                     break;
-                default:
-                    throw new Exception("Onbekende dessert naam");
             }
 
 
@@ -39,7 +37,7 @@ namespace Pizza_Shop
 
         public decimal BerekenBedrag()
         {
-            return Prijs;
+            return Prijs * Anantal;
         }
 
         public DessertType Naam { get; private set; }

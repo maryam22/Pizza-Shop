@@ -30,6 +30,7 @@ namespace PizzaShop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -41,12 +42,12 @@ namespace PizzaShop
             this.label12 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label15 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -70,11 +71,15 @@ namespace PizzaShop
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -111,7 +116,6 @@ namespace PizzaShop
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.numericUpDown2);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.comboBox2);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label3);
@@ -152,7 +156,6 @@ namespace PizzaShop
             this.label16.Size = new System.Drawing.Size(53, 21);
             this.label16.TabIndex = 13;
             this.label16.Text = "Klant:";
-            //this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label13
             // 
@@ -195,7 +198,6 @@ namespace PizzaShop
             this.label12.Size = new System.Drawing.Size(53, 21);
             this.label12.TabIndex = 8;
             this.label12.Text = "Maat:";
-            //this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // numericUpDown2
             // 
@@ -214,17 +216,6 @@ namespace PizzaShop
             this.label4.Size = new System.Drawing.Size(63, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Aantal:";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(210, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Bestel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // comboBox2
             // 
@@ -243,7 +234,6 @@ namespace PizzaShop
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(294, 24);
             this.comboBox2.TabIndex = 3;
-           // this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -266,7 +256,7 @@ namespace PizzaShop
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(294, 24);
             this.comboBox1.TabIndex = 2;
-            //this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -287,7 +277,6 @@ namespace PizzaShop
             this.label2.Size = new System.Drawing.Size(54, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Pizza:";
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabPage2
             // 
@@ -312,8 +301,18 @@ namespace PizzaShop
             this.tabPage2.Text = "Pasta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(87, 401);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(240, 18);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Momenteel pasta is niet beschikbaar";
+            // 
             // checkedListBox2
             // 
+            this.checkedListBox2.Enabled = false;
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
             "Kaas",
@@ -337,6 +336,7 @@ namespace PizzaShop
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.Enabled = false;
             this.radioButton4.Location = new System.Drawing.Point(263, 150);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(64, 22);
@@ -348,6 +348,7 @@ namespace PizzaShop
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.Enabled = false;
             this.radioButton3.Location = new System.Drawing.Point(130, 150);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(83, 22);
@@ -368,6 +369,7 @@ namespace PizzaShop
             // 
             // numericUpDown3
             // 
+            this.numericUpDown3.Enabled = false;
             this.numericUpDown3.Location = new System.Drawing.Point(129, 309);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(150, 35);
@@ -376,6 +378,7 @@ namespace PizzaShop
             // 
             // comboBox5
             // 
+            this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "10",
@@ -399,7 +402,6 @@ namespace PizzaShop
             this.label7.Size = new System.Drawing.Size(47, 21);
             this.label7.TabIndex = 4;
             this.label7.Text = "Prijs:";
-            //this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -413,6 +415,7 @@ namespace PizzaShop
             // 
             // comboBox4
             // 
+            this.comboBox4.Enabled = false;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Spaghetti.",
@@ -469,7 +472,6 @@ namespace PizzaShop
             this.label9.Size = new System.Drawing.Size(63, 21);
             this.label9.TabIndex = 5;
             this.label9.Text = "Aantal:";
-            //this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // comboBox3
             // 
@@ -492,7 +494,6 @@ namespace PizzaShop
             this.label8.Size = new System.Drawing.Size(70, 21);
             this.label8.TabIndex = 3;
             this.label8.Text = "Dessert:";
-           // this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // numericUpDown1
             // 
@@ -535,8 +536,6 @@ namespace PizzaShop
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "Thee",
-            "Koffie",
             "Water",
             "Limonade",
             "Cocacola"});
@@ -565,6 +564,16 @@ namespace PizzaShop
             this.label10.TabIndex = 0;
             this.label10.Text = "Drank:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(914, 273);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Bestel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -572,7 +581,7 @@ namespace PizzaShop
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Location = new System.Drawing.Point(512, 27);
+            this.groupBox1.Location = new System.Drawing.Point(512, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(364, 517);
             this.groupBox1.TabIndex = 7;
@@ -588,28 +597,66 @@ namespace PizzaShop
             this.listBox1.Size = new System.Drawing.Size(328, 454);
             this.listBox1.TabIndex = 0;
             // 
-            // label17
+            // button2
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(87, 401);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(240, 18);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Momenteel pasta is niet beschikbaar";
+            this.button2.Location = new System.Drawing.Point(512, 557);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Total";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(612, 554);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(125, 35);
+            this.textBox2.TabIndex = 9;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(701, 562);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(20, 21);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "€";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button3.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(756, 550);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 39);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
-            this.ClientSize = new System.Drawing.Size(901, 599);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackgroundImage = global::PizzaShopUI.Properties.Resources.pizza_g371cd4530_1920;
+            this.ClientSize = new System.Drawing.Size(1154, 633);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -626,6 +673,7 @@ namespace PizzaShop
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -676,6 +724,10 @@ namespace PizzaShop
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

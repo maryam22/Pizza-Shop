@@ -21,9 +21,7 @@ namespace Pizza_Shop
                 case DrankType.Cocacola:
                     Naam = naam;
                     break;
-                default:
-                    throw new Exception($"Onbekende fris drink naam: {naam}");
-
+                
 
             }
 
